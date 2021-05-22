@@ -10,7 +10,7 @@ import { NGrave } from '@/../../ngrave/Ngrave';
 export default class HelloWorld extends Vue {
 
     beforeMount() {
-        setTimeout(() => { new NGrave('vex', 1000, 500).draw(); }, 500);
+        setTimeout(() => { new NGrave('vex', 500, 3000).draw(); }, 500);
     }
 
 }

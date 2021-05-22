@@ -1,3 +1,6 @@
+import { Bar } from "./Elements/Bar";
+import { Barline, BarlineTypes } from "./Elements/Barline";
+import { MeasureManager } from "./MeasureManager";
 import { SvgFactory} from "./SvgFactory";
 
 export class NGrave {
@@ -30,7 +33,7 @@ export class NGrave {
 
         const svgRoot = SvgFactory.create("svg")
             .set({
-                hieght: this.height,
+                height: this.height,
                 width: this.width,
                 viewbox: `0 0 ${this.height} ${this.width}`
             })
@@ -40,18 +43,6 @@ export class NGrave {
     }
 
     draw() {
-
-        for(let i = 0; i < 5; i++) {
-            SvgFactory.create("rect")
-            .set({
-                x: 50,
-                y: 50 + i*12,
-                width: 300,
-                height: 1.5,
-                fill: "#000"
-            })
-            .appendTo(this.svgRoot);
-        }
-        
+        new MeasureManager(this.svgRoot, { x: 50, y: 50 }).addMeasures(4);
     }
 }
