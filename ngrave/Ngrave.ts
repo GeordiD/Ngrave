@@ -1,4 +1,3 @@
-import { setBlockTracking } from "@vue/runtime-core";
 import { SvgFactory} from "./SvgFactory";
 
 export class NGrave {

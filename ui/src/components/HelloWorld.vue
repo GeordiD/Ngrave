@@ -5,8 +5,7 @@
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
-import { NGrave } from '@/ngrave/Ngrave';
-import Vex from 'vexflow';
+import { NGrave } from '@/../../ngrave/Ngrave';
 
 export default class HelloWorld extends Vue {
 
